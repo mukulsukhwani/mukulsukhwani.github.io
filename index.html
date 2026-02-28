@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday Purvi ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 30px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 20px;
+      border: none;
+      background: white;
+      color: #ff4d6d;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ffe6ec;
+    }
+
+    #mainContent {
+      display: none;
+    }
+
+    h1 {
+      font-size: 38px;
+    }
+
+    #countdown {
+      font-size: 22px;
+      margin: 15px 0 30px;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 200px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.07);
+    }
+
+    /* Letter */
+    .letter {
+      max-width: 700px;
+      margin: 40px auto;
+      font-size: 18px;
+      line-height: 1.6;
+      background: rgba(255,255,255,0.15);
+      padding: 25px;
+      border-radius: 20px;
+    }
+
+    /* Secret Popup */
+    #overlay {
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      top: 0;
+      left: 0;
+    }
+
+    #secretBox {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      color: #ff4d6d;
+      padding: 30px;
+      border-radius: 20px;
+      width: 300px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+
+    /* Hug Animation */
+    .hug-scene {
+      margin-top: 50px;
+      position: relative;
+      height: 250px;
+    }
+
+    .character {
+      position: absolute;
+      bottom: 0;
+      width: 120px;
+    }
+
+    .boy {
+      left: 20%;
+      animation: moveBoy 4s infinite alternate ease-in-out;
+    }
+
+    .girl {
+      right: 20%;
+      animation: moveGirl 4s infinite alternate ease-in-out;
+    }
+
+    @keyframes moveBoy {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(120px); }
+    }
+
+    @keyframes moveGirl {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-120px); }
+    }
+
+    .heart {
+      position: absolute;
+      left: 50%;
+      top: 40px;
+      transform: translateX(-50%);
+      font-size: 40px;
+      animation: popHeart 4s infinite;
+    }
+
+    @keyframes popHeart {
+      0% { opacity: 0; transform: translateX(-50%) scale(0.5); }
+      50% { opacity: 1; transform: translateX(-50%) scale(1.3); }
+      100% { opacity: 0; transform: translateX(-50%) scale(0.5); }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container" id="login">
+  <h1>Enter Password ❤️</h1>
+  <input type="password" id="password" placeholder="Enter special word">
+  <br>
+  <button onclick="checkPassword()">Unlock</button>
+</div>
+
+<div class="container" id="mainContent">
+
+  <h1>Happy Birthday Purvi 🎂</h1>
+
+  <div id="countdown"></div>
+
+  <!-- Photos -->
+  <div class="gallery">
+    <img src="D:\MUKUL FILE\new videos\STATEMENT\mukul\pic1.JPG">
+    <img src="D:\MUKUL FILE\new videos\STATEMENT\mukul\pic2.JPG">
+    <img src="D:\MUKUL FILE\new videos\STATEMENT\mukul\pic3.JPG">
+    <img src="D:\MUKUL FILE\new videos\STATEMENT\mukul\pic4.JPG">
+  </div>
+
+  <!-- Letter -->
+  <div class="letter">
+    My Dearest Purvi 💖,<br><br>
+    You are the most beautiful part of my life.
+    Your smile makes my world brighter,
+    your voice brings me peace,
+    and your love gives me strength.<br><br>
+    On your special day,
+    I just want to promise you that I will always stand beside you,
+    support your dreams, protect your smile,
+    and love you more with every passing day.<br><br>
+    Happy Birthday my love ❤️<br>
+    Forever Yours 💕
+  </div>
+
+  <!-- Hug Scene -->
+  <div class="hug-scene">
+    <div class="heart">❤️</div>
+
+    <svg class="character boy" viewBox="0 0 100 200">
+      <circle cx="50" cy="40" r="20" fill="#ffd1a9"/>
+      <rect x="30" y="60" width="40" height="70" rx="15" fill="#4da6ff"/>
+      <rect x="35" y="130" width="10" height="50" fill="#333"/>
+      <rect x="55" y="130" width="10" height="50" fill="#333"/>
+    </svg>
+
+    <svg class="character girl" viewBox="0 0 100 200">
+      <circle cx="50" cy="40" r="20" fill="#ffd1a9"/>
+      <rect x="30" y="60" width="40" height="70" rx="20" fill="#ff66a3"/>
+      <rect x="35" y="130" width="10" height="50" fill="#333"/>
+      <rect x="55" y="130" width="10" height="50" fill="#333"/>
+    </svg>
+  </div>
+
+  <p>Every hug with you feels like home ❤️</p>
+
+  <!-- Secret Button -->
+  <button onclick="showSecret()">Click For Secret Message 💌</button>
+
+</div>
+
+<div id="overlay"></div>
+
+<div id="secretBox">
+  <h2>Secret Message 💕</h2>
+  <p>
+    No matter what happens in life,
+    I will always choose you.
+    Today, tomorrow, forever. ❤️
+  </p>
+  <button onclick="closeSecret()">Close</button>
+</div>
+
+<script>
+
+function checkPassword() {
+  var enteredPassword = document.getElementById("password").value;
+  var correctPassword = "purvi10"; // CHANGE THIS
+
+  if (enteredPassword === correctPassword) {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("mainContent").style.display = "block";
+  } else {
+    alert("Wrong password ❤️ Try again!");
+  }
+}
+
+function showSecret() {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("secretBox").style.display = "block";
+}
+
+function closeSecret() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("secretBox").style.display = "none";
+}
+
+var birthday = new Date("March 10, 2026 00:00:00").getTime();
+
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = birthday - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML =
+  "Countdown: " + days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "It's Her Birthday!!! 🎉❤️";
+  }
+}, 1000);
+
+</script>
+
+</body>
+</html>
